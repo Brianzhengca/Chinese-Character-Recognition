@@ -1,0 +1,6 @@
+/usr/local/bin/python3 "OCR/Data Preprocessing/main.py"
+/usr/local/bin/python3 "OCR/model_generation.py"
+/usr/local/bin/python3 "OCR/predictor.py"
+/usr/local/bin/python3 "OCR/segmentpredict.py"
+/usr/local/bin/python3 "Correction/correct.py"
+/usr/local/bin/python3 "main.py"
