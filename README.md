@@ -23,53 +23,45 @@ in the recognized characters and replace them according to my reference map if n
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* MacOS Sonoma 14.3
+* Python 3.12.1
+* Keras 3.3.3
+* OpenCV-Python 4.9.0.80
+* NumPy 1.26.4
+* Pillow 10.2.0
+* Pandas 2.2.0
+* Matplotlib 3.8.3
+* PyCorrector 1.0.4
 
-### Installing
+### Usage with Pre-trained CNN model
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
 ```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
+git clone https://github.com/Brianzhengca/Chinese-Character-Recognition.git
+cd Chinese-Character-Recognition
+python3 main.py
 ```
 
-## Authors
+### Usage with Training CNN Yourself
 
-Contributors names and contact info
+* It is a little complicated this way since the CASIA-HWDB dataset is too big to be uploaded to GitHub. 
+* Essentially you need to download the dataset and place it inside a directory called ```archive``` under ```/OCR/Data Preprocessing```.
+* The file ```/OCR/Data Preprocessing/main.py``` must be able to access ```OCR/Data Preprocessing/archive/CASIA-HWDB_Train/Train``` and ```OCR/Data Preprocessing/archive/CASIA-HWDB_Test/Test```
+* Afterwards run the following command
+```
+cd Chinese-Character-Recognition
+source run.sh
+```
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+## Limitations
 
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+Because of limited resource constraints, I only trained the CNN to recognize the following characters ```大家准备开始女台``` and my reference map only consists of ```{"始":"女台","女台":"始"}```. I expect the performance to significantly decrease if it was trained to recognize more characters. This project is mainly an implementation of a fun idea and is not intended for any use beyond that. 
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+Use it however you like. 
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* All the papers and projects mentioned above in the description
+* Stackoverflow
+* Kaggle
